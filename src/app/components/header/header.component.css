@@ -1,0 +1,16 @@
+header {
+    display: flex;
+    height: 100px;
+    
+}
+
+
+.partie-gauche {
+    background-color: #4F68E9; /* Couleur bleue */
+    flex: 5; /* Prend 3 parts de l'espace disponible */
+}
+
+.partie-droite {
+    background-color: #7794EB; /* Couleur rouge */
+    flex: 1; /* Prend 1 part de l'espace disponible */
+}

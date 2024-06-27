@@ -1,0 +1,31 @@
+<div>
+    <app-searchbar [pokemonList]="pokemons" (filteredListChanged)="updateFilteredPokemonList($event)"></app-searchbar>
+  </div>
+  
+  <div class="pokegrid">
+    <img src="../../../assets/pngegg.png" alt="" class="pokeball">
+    <img src="../../../assets/pngegg.png" alt="" class="pokeball2">
+    <div class="pokebox" *ngFor="let pokemon of filteredPokemonList | paginate: { itemsPerPage: 10, currentPage: page, totalItems: totalPokemons }">
+      <ul class="pokeinfo">
+        <li>
+          <img [src]="getSpriteUrl(pokemon.url)" alt="pokemon sprite" class="pokeimage">
+          <h3>{{ pokemon.name }}</h3>
+          <p *ngIf="pokemon.details">
+            <b>{{ pokemon.details.id }}</b>
+          </p>
+          <p *ngIf="pokemon.details">
+            <b>type :</b> 
+            <span *ngFor="let type of pokemon.details.types; let last = last">
+              {{ type.type.name }}<span *ngIf="!last">, </span>
+            </span>
+          </p>
+          <p *ngIf="pokemon.details">
+            <b>height :</b> {{ pokemon.details.height }}
+          </p>
+        </li>
+      </ul>
+    </div>
+  </div>
+  
+  <pagination-controls (pageChange)="page = $event; getPokemons()"></pagination-controls>
+  

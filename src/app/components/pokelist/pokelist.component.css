@@ -1,0 +1,77 @@
+.pokelist {
+    background-color: #F3F3FB;
+    width: 500px;
+    height: 100px;
+    margin: 20px;
+    float: right;
+    border-radius: 20px 0px 0px 20px;
+}
+
+.pokeinfo {
+    display: flex;
+    flex-direction: column;
+    line-height: 1px;
+}
+
+
+
+.pokeimage {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    padding-left: 50px;
+    
+}
+
+
+.pokegrid {
+    display: grid;
+    padding: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
+    padding-left: 140px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.pokebox {
+    width: 300px;
+    height: 300px;
+    background-color: #F3F3FB;
+    border: 5px solid #81A8E5;
+    box-shadow: 0 0 0 5px #FFF77F;
+    border-radius: 20px;
+    display: grid;
+    text-align: center;
+    margin: 20px;
+}
+
+.pokeball {
+    position: absolute;
+    top: 0;
+    left: -650px;
+    z-index: -1;
+    animation: rotation 5s infinite linear;
+}
+
+.pokeball2 {
+    position: absolute;
+    top: 0;
+    right: -650px;
+    z-index: -1;
+    animation: rotation 5s infinite linear;
+}
+
+/* Définir l'animation de rotation */
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+pagination-controls {
+    text-align: center;
+}
