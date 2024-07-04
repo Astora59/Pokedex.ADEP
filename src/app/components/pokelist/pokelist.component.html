@@ -4,7 +4,6 @@
   
   <div class="pokegrid">
     <img src="../../../assets/pngegg.png" alt="" class="pokeball">
-    <img src="../../../assets/pngegg.png" alt="" class="pokeball2">
     <div class="pokebox" *ngFor="let pokemon of filteredPokemonList | paginate: { itemsPerPage: 10, currentPage: page, totalItems: totalPokemons }">
       <ul class="pokeinfo">
         <li>
